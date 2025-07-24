@@ -14,15 +14,14 @@ A beautiful, real-time countdown timer that tracks the time remaining until your
 
 ## 🚀 Live Demo
 
-Visit the live application: [Your Live URL Here]
-
+Visit the live application: [Primary](https://gehalt.bedless.dev) or [Secondary](https://my-gehalt.bedless.dev)
 ## 📸 Screenshots
 
 ### Main Page
-![Main Countdown Page](screenshot-main.png)
+![Main Countdown Page](static/screenshot-main.png)
 
 ### Embeddable Widget
-![Embeddable Widget](screenshot-embed.png)
+![Embeddable Widget](static/screenshot-embed.png)
 
 ## 🛠️ Tech Stack
 
