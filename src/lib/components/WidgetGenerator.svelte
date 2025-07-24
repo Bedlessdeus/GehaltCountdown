@@ -23,7 +23,7 @@
 
 	function copyToClipboard() {
 		navigator.clipboard.writeText(iframeCode).then(() => {
-			alert('Iframe-Code wurde in die Zwischenablage kopiert!');
+			alert('Iframe code copied to clipboard!');
 		});
 	}
 
@@ -49,7 +49,7 @@
 
 	<div class="grid grid-cols-1 gap-6 md:grid-cols-2">
 		<div class="space-y-4">
-			<h3 class="mb-4 text-lg font-semibold text-gray-300">Konfiguration</h3>
+			<h3 class="mb-4 text-lg font-semibold text-gray-300">Configuration</h3>
 
 			<div>
 				<label class="mb-2 block text-sm font-medium text-gray-300" for="theme-select">
@@ -60,27 +60,27 @@
 					class="w-full rounded-md border border-gray-600 bg-gray-700 p-2 text-white"
 					id="theme-select"
 				>
-					<option value="light">Hell</option>
-					<option value="dark">Dunkel</option>
+					<option value="light">Light</option>
+					<option value="dark">Dark</option>
 				</select>
 			</div>
 
 			<div class="flex items-center">
 				<input type="checkbox" id="compact" bind:checked={compact} class="mr-2" />
 				<label for="compact" class="text-sm font-medium text-gray-300">
-					Kompakt-Modus (ohne Titel)
+					Compact mode (without title)
 				</label>
 			</div>
 
 			<div class="flex items-center">
 				<input type="checkbox" id="labels" bind:checked={showLabels} class="mr-2" />
 				<label for="labels" class="text-sm font-medium text-gray-300">
-					Beschriftungen anzeigen
+					Show labels
 				</label>
 			</div>
 
 			<div>
-				<label class="mb-2 block text-sm font-medium text-gray-300"> Hintergrundfarbe </label>
+				<label class="mb-2 block text-sm font-medium text-gray-300"> Background Color </label>
 				<div class="flex gap-2">
 					<input
 						type="color"
@@ -98,7 +98,7 @@
 
 			<div class="grid grid-cols-2 gap-4">
 				<div>
-					<label class="mb-2 block text-sm font-medium text-gray-300"> Breite (px) </label>
+					<label class="mb-2 block text-sm font-medium text-gray-300"> Width (px) </label>
 					<input
 						type="number"
 						bind:value={width}
@@ -108,7 +108,7 @@
 					/>
 				</div>
 				<div>
-					<label class="mb-2 block text-sm font-medium text-gray-300"> Höhe (px) </label>
+					<label class="mb-2 block text-sm font-medium text-gray-300"> Height (px) </label>
 					<input
 						type="number"
 						bind:value={height}
@@ -121,7 +121,7 @@
 		</div>
 
 		<div class="space-y-4">
-			<h3 class="mb-4 text-lg font-semibold text-gray-300">Vorschau</h3>
+			<h3 class="mb-4 text-lg font-semibold text-gray-300">Preview</h3>
 
 			<div class="overflow-hidden rounded-lg border border-gray-600">
 				<iframe
@@ -136,7 +136,7 @@
 			</div>
 
 			<div>
-				<label class="mb-2 block text-sm font-medium text-gray-300"> Iframe-Code </label>
+				<label class="mb-2 block text-sm font-medium text-gray-300"> Iframe Code </label>
 				<div class="relative">
 					<textarea
 						readonly
@@ -148,13 +148,13 @@
 						on:click={copyToClipboard}
 						class="absolute top-2 right-2 rounded bg-blue-500 px-3 py-1 text-xs text-white transition-colors hover:bg-blue-600"
 					>
-						Kopieren
+						Copy
 					</button>
 				</div>
 			</div>
 
 			<div>
-				<label class="mb-2 block text-sm font-medium text-gray-300"> Direkter Link </label>
+				<label class="mb-2 block text-sm font-medium text-gray-300"> Direct Link </label>
 				<div class="flex">
 					<input
 						readonly
@@ -165,7 +165,7 @@
 						on:click={() => window.open(embedUrl, '_blank')}
 						class="rounded-r-md bg-green-500 px-4 py-2 text-sm text-white transition-colors hover:bg-green-600"
 					>
-						Öffnen
+						Open
 					</button>
 				</div>
 			</div>
@@ -173,13 +173,13 @@
 	</div>
 
 	<div class="mt-6 rounded-lg bg-gray-700 p-4">
-		<h4 class="mb-2 font-semibold text-white">💡 Verwendung</h4>
+		<h4 class="mb-2 font-semibold text-white">💡 Usage</h4>
 		<ul class="space-y-1 text-sm text-gray-300">
-			<li>• Kopieren Sie den Iframe-Code und fügen Sie ihn in Ihre Website ein</li>
-			<li>• Das Widget wird automatisch alle Sekunde aktualisiert</li>
-			<li>• Responsive Design passt sich automatisch an</li>
+			<li>• Copy the iframe code and paste it into your website</li>
+			<li>• The widget will automatically update every second</li>
+			<li>• Responsive design adapts automatically</li>
 			<li>
-				• URL-Parameter: <code class="rounded bg-gray-600 px-1">theme</code>,
+				• URL parameters: <code class="rounded bg-gray-600 px-1">theme</code>,
 				<code class="rounded bg-gray-600 px-1">compact</code>,
 				<code class="rounded bg-gray-600 px-1">labels</code>,
 				<code class="rounded bg-gray-600 px-1">bg</code>

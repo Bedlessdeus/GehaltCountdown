@@ -24,14 +24,14 @@
 </script>
 
 <div
-	class="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 p-8 transition-all duration-300"
+	class=" p-8 transition-all duration-300"
 >
 	<div class="mx-auto max-w-4xl text-center">
-		<h1 class="mb-8 text-4xl font-bold text-white md:text-6xl">Gehalt Überweisung</h1>
+		<h1 class="mb-8 text-4xl font-bold text-white md:text-6xl">Gehalt Countdown</h1>
 
 		<p class="mb-12 text-xl text-gray-300">
-			Zeit bis zur nächsten Zahlung am <span class="font-semibold"
-				>{getNextPaymentDate().toLocaleDateString('de-DE', {
+			Time until next payment on <span class="font-semibold"
+				>{getNextPaymentDate().toLocaleDateString('en-US', {
 					day: '2-digit',
 					month: 'long',
 					year: 'numeric',
@@ -49,7 +49,7 @@
 					{days}
 				</div>
 				<div class="font-medium text-gray-300">
-					{days === 1 ? 'Tag' : 'Tage'}
+					{days === 1 ? 'Day' : 'Days'}
 				</div>
 			</div>
 
@@ -60,7 +60,7 @@
 					{hours}
 				</div>
 				<div class="font-medium text-gray-300">
-					{hours === 1 ? 'Stunde' : 'Stunden'}
+					{hours === 1 ? 'Hour' : 'Hours'}
 				</div>
 			</div>
 
@@ -71,7 +71,7 @@
 					{minutes}
 				</div>
 				<div class="font-medium text-gray-300">
-					{minutes === 1 ? 'Minute' : 'Minuten'}
+					{minutes === 1 ? 'Minute' : 'Minutes'}
 				</div>
 			</div>
 
@@ -82,7 +82,7 @@
 					{seconds}
 				</div>
 				<div class="font-medium text-gray-300">
-					{seconds === 1 ? 'Sekunde' : 'Sekunden'}
+					{seconds === 1 ? 'Second' : 'Seconds'}
 				</div>
 			</div>
 		</div>
@@ -112,7 +112,7 @@
 					href="/docs"
 					class="rounded-full bg-orange-900 px-3 py-1 text-orange-200 transition-colors hover:bg-orange-800"
 				>
-					📋 Dokumentation
+					📋 Documentation
 				</a>
 			</div>
 		</div>

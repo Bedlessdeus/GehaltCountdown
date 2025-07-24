@@ -83,7 +83,7 @@
 				</div>
 				{#if showLabels}
 					<div class="text-xs md:text-sm font-medium" style="color: {labelColor};">
-						{days === 1 ? 'Tag' : 'Tage'}
+						{days === 1 ? 'Day' : 'Days'}
 					</div>
 				{/if}
 			</div>
@@ -94,7 +94,7 @@
 				</div>
 				{#if showLabels}
 					<div class="text-xs md:text-sm font-medium" style="color: {labelColor};">
-						{hours === 1 ? 'Stunde' : 'Stunden'}
+						{hours === 1 ? 'Hour' : 'Hours'}
 					</div>
 				{/if}
 			</div>
@@ -105,7 +105,7 @@
 				</div>
 				{#if showLabels}
 					<div class="text-xs md:text-sm font-medium" style="color: {labelColor};">
-						{minutes === 1 ? 'Minute' : 'Minuten'}
+						{minutes === 1 ? 'Minute' : 'Minutes'}
 					</div>
 				{/if}
 			</div>
@@ -116,7 +116,7 @@
 				</div>
 				{#if showLabels}
 					<div class="text-xs md:text-sm font-medium" style="color: {labelColor};">
-						{seconds === 1 ? 'Sekunde' : 'Sekunden'}
+						{seconds === 1 ? 'Second' : 'Seconds'}
 					</div>
 				{/if}
 			</div>
@@ -124,9 +124,15 @@
 		
 		{#if !compact}
 			<div class="mt-4 text-center">
-				<p class="text-xs" style="color: {labelColor};">
-					Powered by Gehalt Countdown
-				</p>
+				<a 
+					href="/"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="text-xs hover:underline transition-colors"
+					style="color: {labelColor};"
+				>
+					Powered by Salary Countdown
+				</a>
 			</div>
 		{/if}
 	</div>
