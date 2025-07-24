@@ -1,4 +1,4 @@
-export function getNextPaymentDate(): Date {
+export const getNextPaymentDate = () => {
 	const now = new Date();
 	const currentYear = now.getFullYear();
 	const currentMonth = now.getMonth();
@@ -10,9 +10,9 @@ export function getNextPaymentDate(): Date {
 	}
 
 	return nextPayment;
-}
+};
 
-export function getTimeUntilNextPayment() {
+export const getTimeUntilNextPayment = () => {
 	const now = new Date();
 	const nextPayment = getNextPaymentDate();
 	const difference = nextPayment.getTime() - now.getTime();
@@ -27,4 +27,4 @@ export function getTimeUntilNextPayment() {
 	} else {
 		return { days: 0, hours: 0, minutes: 0, seconds: 0 };
 	}
-}
+};
