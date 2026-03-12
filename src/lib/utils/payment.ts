@@ -5,8 +5,15 @@ export const getNextPaymentDate = () => {
 
 	let nextPayment = new Date(currentYear, currentMonth + 1, 0, 13, 0, 0);
 
+
+	nextPayment.getDay();
+
 	if (now >= nextPayment) {
 		nextPayment = new Date(currentYear, currentMonth + 2, 0, 13, 0, 0);
+	}
+
+	while(!(nextPayment.getDay() > 0 && nextPayment.getDay() < 6)) {
+		nextPayment.setDate(nextPayment.getDate() - 1)
 	}
 
 	return nextPayment;
